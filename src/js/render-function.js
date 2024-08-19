@@ -1,6 +1,6 @@
-// Описаний у документації
+// /// Discription in the documentation
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
+// Idditional import styles
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export function createImages(data) {
