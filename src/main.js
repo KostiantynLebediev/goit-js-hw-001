@@ -15,7 +15,7 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   clearImages();
   event.preventDefault();
-  loader.classList.remove('hiden');
+  loader.classList.remove('hidden');
   let wordForSearch = input.value.trim();
   const page = 1;
   if (wordForSearch === '') {
@@ -23,7 +23,7 @@ function handleSubmit(event) {
       position: 'topRight',
       message: 'Please fill the input',
     });
-    loader.classList.add('hiden');
+    loader.classList.add('hidden');
     return;
   }
   searchImagesByQuery(`${wordForSearch}`, page).then(async data => {
@@ -33,7 +33,8 @@ function handleSubmit(event) {
         message:
           'Sorry, there are no images matching your search query. Please try again!',
       });
-      loader.classList.add('hiden');
+
+      loader.classList.add('hidden');
       return;
     } else {
       createImages(data);
